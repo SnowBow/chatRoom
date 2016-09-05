@@ -11,8 +11,6 @@ router.get('/', function(req, res, next) {
 router.get('/messages', function(req, res, next) {
     con.query('SELECT * FROM message',function(err,rows){
         if(err) throw err;
-        // console.log('Data received from Db:\n');
-        // console.log(JSON.stringify(rows,null,4));
         res.send(rows);
     });
 

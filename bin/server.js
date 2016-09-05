@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('../app');
 var debug = require('debug')('chatApp:server');
 var http = require('http');
 var port = normalizePort(process.env.PORT || '3000');
