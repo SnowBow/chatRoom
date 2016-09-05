@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .chat
+        .chat-title
+            h1 Jason Wu's Chat Room
+            h2 Carnegie Mellon University
+            figure.avatar
+                img(src='imgs/carnegie.png')
+            button.button-exit#J_Exit(type='submit') Exit
+        .messages
+            .messages-content#J_Board
+        .message-box
+            textarea#J_Input.message-input(type='text', placeholder='Type a message...')
+            input#J_Hidden(type='hidden',value='#{name}')
+            button.message-submit#J_Send(type='submit') Send
+    .bg
+block append footerScript
+    script(src='js/vendor/jquery.mCustomScrollbar.concat.min.js')
+    script(src='js/chat.js')
+
+
