@@ -7,7 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('chatApp:server');
 var http = require('http');
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3002');
 app.set('port', port);
 var server = http.createServer(app);
 var connection = require('../public/js/dbconnection');

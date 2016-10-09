@@ -11,6 +11,7 @@ router.get('/', function(req, res, next) {
 router.get('/messages', function(req, res, next) {
     con.query('SELECT * FROM message',function(err,rows){
         if(err) throw err;
+        res.header('Access-Control-Allow-Origin', '*');
         res.send(rows);
     });
 
